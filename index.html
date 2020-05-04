@@ -7,10 +7,55 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body style="background-color: #262626; color: #fff;">
+    <p></p>
+    <button class="increase">증가</button>
+    <button class="decrease">감소</button>
     <script src="./js/index.js"></script>
     <script>
         const body = document.querySelector('body');
         console.log(`배경 칼라는 ${body.style.backgroundColor} 컬러는 ${body.style.color}`);
+    </script>
+    <script>
+        // const Counter = (function () {
+        //   let num = 0;
+        //   return {
+        //     increase() {
+        //       ++num;
+        //       document.querySelector('p').textContent = num;
+        //     },
+        //     decrease() {
+        //       --num;
+        //       document.querySelector('p').textContent = num;
+        //     }
+        //   };
+        // }());
+        // document.querySelector('.increase').addEventListener('click', Counter.increase);
+        // document.querySelector('.decrease').addEventListener('click', Counter.decrease);
+        const o = {
+          foo: 1
+        };
+        console.log(Object.getOwnPropertyDescriptor(o, 'foo'));
+    </script>
+    <script>
+        function linearSearch(array, target) {
+          for (let i = 0; i < array.length; i++) {
+            if (array[i] === target) {
+              return array[i] - 1;
+            }
+            if (i === array.length - 1) {
+              if (array[i] !== target) {
+                return -1;
+              }
+            }
+          }
+        }
+        console.log(linearSearch([1, 2, 3, 4, 5, 6], 1)); //0
+        console.log(linearSearch([1, 2, 3, 4, 5, 6], 3)); //2
+        console.log(linearSearch([1, 2, 3, 4, 5, 6], 5)); //4
+        console.log(linearSearch([1, 2, 3, 4, 5, 6], 6)); //5
+        console.log(linearSearch([1, 2, 3, 4, 5, 6], -1)); //-1
+        console.log(linearSearch([1, 2, 3, 4, 5, 6], 0)); //-1
+        console.log(linearSearch([1, 2, 3, 4, 5, 6], 7)); //-1
     </script>
 </body>
 </html>
