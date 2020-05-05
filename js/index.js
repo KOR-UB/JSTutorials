@@ -174,7 +174,7 @@ function binarySearch (array, target) {
     else if (array[mid] > target) end = mid - 1;
     else start = mid + 1;
   }
-  return -1
+  return -1;
 }
 console.log(binarySearch([1, 2, 3, 4, 5, 6], 1)); // 0
 console.log(binarySearch([1, 2, 3, 4, 5, 6], 3)); // 2
