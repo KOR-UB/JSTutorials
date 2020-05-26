@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body
+    {
+      font-size: 20px;
+      background: aquamarine;
+    }
+    section
+    {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container
+    {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+    }
+    .container h2
+    {
+      color: rgb(80, 80, 80);
+      font-size: 4em;
+    }
+    .container p
+    {
+      color: rgb(20, 20, 20);
+      font-size: 1.5em;
+      text-align: justify;
+      width: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">L O G O</h1>
+  </header>
+  <section>
+    <div class="container">
+      <h2>심심풀이</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, at magni possimus optio quia, quas ab ipsam voluptates maiores esse fugiat corrupti voluptate, quos veritatis a ut? Architecto, recusandae molestias?</p>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2>심심풀이</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, at magni possimus optio quia, quas ab ipsam voluptates maiores esse fugiat corrupti voluptate, quos veritatis a ut? Architecto, recusandae molestias?</p>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h2>심심풀이</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, at magni possimus optio quia, quas ab ipsam voluptates maiores esse fugiat corrupti voluptate, quos veritatis a ut? Architecto, recusandae molestias?</p>
+    </div>
+  </section>
+  <script src="01.js"></script>
+  <script>
+    const date = new Date();
+    const fullYear = date.getFullYear();
+    const ageList = [1990, 1974, 1995, 1993, 2013];
+    const age = ageList.map(year => fullYear - year).sort((a, b) => a - b).filter(check => check > 25).join(' 세\n');
+    console.log(`${age} 세`);
+  </script>
+</body>
+</html>
